@@ -1,0 +1,92 @@
+@import './../helpers/mixins';
+
+.new{
+    grid-area: new;
+    display: flex;
+    gap: 3%;
+    &__content{
+        width: 72%;
+        background: #FFFFFF;
+        box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+        border-radius: 15px;
+        padding: 15px  0 0 10px;
+    }
+    &-content{
+        &__list{
+            display: flex;
+            height: auto;
+            margin-top: 15px;
+            gap: 6px;
+        }
+        &__item{
+            width: 40px;
+        }
+        &__item:last-child{
+            width: 45px;
+        }
+        &__user-name{
+            display: flex;
+            justify-content: center;
+            @include font2(10px, normal, 12px);
+            color: #404040;
+        }
+        &__user-photo{
+            height: 40px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &__user-button{
+            border: none;
+            background: none;
+        }
+    }
+    &__image{
+        background: #ED654C;
+        border-radius: 15px;
+        width: 25%;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+        padding: 0 0 7px 7px;
+        box-sizing: border-box;
+    }
+    &__icon{
+        position: absolute;
+        left: -10px;
+        top: 10px;
+    }
+    &__get-loan{
+        @include font1(18px, normal, 22px);
+        color: #FFFFFF;
+    }
+    &__footer{
+        display: flex;
+        gap: 5px;
+        margin-top: 10px;
+    }
+    &__input{
+        width: 50%;
+        height: 30px;
+        padding: 0 10px;
+        border: 1px solid #197BBD;
+        box-sizing: border-box;
+        border-radius: 10px;
+        color: #C7C7C7;
+        @include font1(18px, 300, 20px);
+    }
+    &__button  {
+        width: 44%;
+        height: 30px;
+        color: #404040;
+        @include font1(11px, bold, 14px);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+}

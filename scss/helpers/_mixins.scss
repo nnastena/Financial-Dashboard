@@ -1,0 +1,15 @@
+@mixin font1($size, $weight, $height) {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+}
+
+@mixin font2($size, $weight, $height) {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+}

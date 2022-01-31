@@ -1,0 +1,71 @@
+@import './../helpers/mixins';
+.history{
+    grid-area: history;
+    background: #FFFFFF;
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    border-radius: 20px;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    &__table{
+        width: 100%;
+        text-align: left;
+        border: 1;
+        margin-top: 10px;
+    }
+    &__header{
+        &_1{
+            width: 39%;
+        }
+        &_2{
+            width: 23%;
+        }
+        &_3{
+            width: 27%;
+        }
+        &_4{
+            width: 11%;
+        }
+    }
+    &__row{
+        height: 30px;
+        position: relative;
+    }
+    &__tbody{
+        .history__row::after{
+            position: absolute;
+            content: '';
+            width: 446px;
+            height: 0.5px;
+            background-color: #ECECEC;
+            left: 0;
+            top: 100%;
+        }
+    }
+    
+    &__icon{
+        background: #EFEFEF;
+        border-radius: 4px;
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+    &__img{
+        width: 13px;
+        height: 13px;
+    }
+    &__text{
+        @include font1(12px, normal, 15px);
+        color: #404040;
+        height: 30px;
+        display: flex;
+        align-items: center;
+    }
+    &__num{
+        @include font1(12px, bold, 15px);
+        color: #404040;
+        text-align: end;
+    }
+}

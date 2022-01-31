@@ -1,0 +1,90 @@
+@import './helpers/mixins';
+
+@import './components/aside';
+@import './components/header';
+@import './components/main';
+
+@import './sections/card';
+@import './sections/history';
+@import './sections/goals';
+@import './sections/statistics';
+@import './sections/new';
+
+
+body, h1,h2,h3,h4,h5, h6, h2, ul, p, a, img, button, input, tr, td, th{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+a:hover, button:hover{
+    cursor: pointer;
+}
+ul{
+    list-style-type: none;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.body{
+    background: #F0F0F0;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+.container{
+    background: linear-gradient(121.32deg, #FFFFFF 10.96%, #FFFFFF 72%, #FFFFFF 99.98%);
+    box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    border-radius: 35px;
+    width: 1200px;
+    height: 735px;
+    display: grid;
+    padding-right: 35px;
+    padding-bottom: 25px;
+    box-sizing: border-box;
+    grid-template-areas:'left header'
+                        'left main';
+    grid-column-gap: 35px;
+    grid-template-columns: 205px 925px;
+    grid-template-rows: 125px 1fr;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__image{
+        position: relative;
+        width: 45px;
+        height: 30px;
+        margin-right: 10px;
+    }
+    &__icon{
+        position: absolute;
+        width: 23px;
+        height: 22px;
+        left: 26px;
+        top: -2px;
+        //stroke="#197BBD"
+    }
+    &__name{
+        @include font1(16px, bold, 21px);
+        color: #0F4264;
+    }
+}
+
+.title{
+    @include font2(20px, 600, 25px);
+    color: #404040;
+}
+.paragraph{
+    @include font1(12px, normal, 15px);
+    color: #AEAEAE;
+}
+.button{
+    background: #FFC145;
+    border: none;
+}

@@ -1,0 +1,103 @@
+@import './../helpers/mixins';
+
+.statistics{
+    grid-area: statistics;
+    &__list{
+        margin-top: 20px;
+    }
+    &__item{
+        display: flex;
+        align-items: flex-end;
+        height: 40px;
+        margin-bottom: 10px;
+        &_shopping{
+            position: relative;
+            .statistics__img{
+                background: #FFEADA;
+                border-radius: 3px;
+            }
+            
+            .statistics__paragraph::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: -17px;
+            background: linear-gradient(270deg, #FCAE73 0%, #F79042 99.18%);
+            border-radius: 12px;
+            height: 8px;
+            width: 52%;
+            }
+        }
+        &_electronics{
+            position: relative;
+            .statistics__img{
+                background: #DDF9E4;
+                border-radius: 3px;
+            }
+
+            .statistics__paragraph::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: -17px;
+            background: linear-gradient(90deg, #209D43 0%, #2BC255 100%);
+            border-radius: 12px;
+            height: 8px;
+            width: 21%;
+            }
+        }
+        &_travels{
+            position: relative;
+            .statistics__img{
+                background: #E4F0FF;;
+                border-radius: 3px;
+            }
+
+            .statistics__paragraph::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: -17px;
+            background: #70A6E8;
+            border-radius: 12px;
+            height: 8px;
+            width: 74%;
+            }
+        }
+    }
+    &__paragraph{
+        width: 300px;
+        margin-bottom: 5px;
+        position: relative;
+    } 
+    &__paragraph::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -17px;
+        background: #F1F1F1;
+        border-radius: 12px;
+        height: 8px;
+        width: 300px;
+    }
+    &__img{
+        height: 38px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    }
+    &__icon{
+        height: 20px;
+        width: 20px;
+    }
+    &__number{
+        margin-left: 15px;
+        @include font1(20px, 600, 25px);
+        color: #696969;
+        width: 40px;
+        height: 100%;
+    }
+}

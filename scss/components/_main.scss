@@ -1,0 +1,14 @@
+@import './../helpers/mixins';
+
+.main{
+    grid-area: main;
+    display: grid;
+    grid-template-areas:'card goals'
+                        'card statistics'
+                        'history statistics'
+                        'history new';
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+    grid-template-columns: 490px 410px;
+    grid-template-rows: 190px 80px 80px 160px;
+}
